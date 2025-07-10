@@ -1,8 +1,107 @@
-<html>
-    <head>
-        <title>Alexander Piscioneri</title>
-    </head>
-    <body>
-        <p>This is the first iteration of alexanderpiscioneri.com</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexander Piscioneri</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .name-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(2rem, 10vw, 6rem);
+      text-align: center;
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .letter {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideIn 0.6s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Delay animation per letter */
+    .letter:nth-child(1)  { animation-delay: 0.0s; }
+    .letter:nth-child(2)  { animation-delay: 0.05s; }
+    .letter:nth-child(3)  { animation-delay: 0.1s; }
+    .letter:nth-child(4)  { animation-delay: 0.15s; }
+    .letter:nth-child(5)  { animation-delay: 0.2s; }
+    .letter:nth-child(6)  { animation-delay: 0.25s; }
+    .letter:nth-child(7)  { animation-delay: 0.3s; }
+    .letter:nth-child(8)  { animation-delay: 0.35s; }
+    .letter:nth-child(9)  { animation-delay: 0.4s; }
+    .letter:nth-child(10) { animation-delay: 0.45s; }
+    .letter:nth-child(11) { animation-delay: 0.5s; }
+
+    @media (max-width: 600px) {
+      .name-container {
+        flex-direction: column;
+        font-size: clamp(2rem, 12vw, 4rem);
+      }
+
+      .line {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name-container">
+    <div class="line">
+      <span class="letter">A</span>
+      <span class="letter">l</span>
+      <span class="letter">e</span>
+      <span class="letter">x</span>
+      <span class="letter">a</span>
+      <span class="letter">n</span>
+      <span class="letter">d</span>
+      <span class="letter">e</span>
+      <span class="letter">r</span>
+    </div>
+    <div class="line">
+      <span class="letter">P</span>
+      <span class="letter">i</span>
+      <span class="letter">s</span>
+      <span class="letter">c</span>
+      <span class="letter">i</span>
+      <span class="letter">o</span>
+      <span class="letter">n</span>
+      <span class="letter">e</span>
+      <span class="letter">r</span>
+      <span class="letter">i</span>
+    </div>
+  </div>
+</body>
 </html>
